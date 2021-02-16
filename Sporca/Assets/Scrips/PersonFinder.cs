@@ -38,8 +38,15 @@ public class PersonFinder : MonoBehaviour
                 // Checks if the ray hit something
                 if (Physics.Raycast(ray, out hitObject))
                 {
-                    source.Play();
-                    Debug.Log("Touch");
+                    if (hitObject.transform.tag == "Character")
+                    {
+                        source.Play();
+                        Debug.Log("Found me");
+                    }
+                    else
+                    {
+                        Debug.Log("Better luck next time");
+                    }
                 }
             }
         }
