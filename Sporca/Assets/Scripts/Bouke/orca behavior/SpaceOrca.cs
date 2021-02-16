@@ -33,6 +33,8 @@ public class SpaceOrca : MonoBehaviour
         {
             //set the time that the orca moves to a random time
             timeBeforeNextmovement -= Time.deltaTime;
+            //let the object look around
+            transform.Rotate(transform.rotation.x , transform.rotation.y + 0.01f, transform.rotation.z);
         }
         
         if (timeBeforeNextmovement <= 0)
@@ -59,6 +61,7 @@ public class SpaceOrca : MonoBehaviour
         float step = speed * Time.deltaTime;
         //if it gets the new movetoposition varibale let this move it to the location
         transform.position = Vector3.MoveTowards(transform.position, moveToPosition, step);
+        //look where it is going
         transform.LookAt(moveToPosition);
     }
 }
