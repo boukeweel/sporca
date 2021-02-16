@@ -11,6 +11,14 @@ public class PersonFinder : MonoBehaviour
     [SerializeField]
     private Camera arCamera;
 
+    [SerializeField]
+    private AudioSource source;
+
+    private void Start()
+    {
+        
+    }
+
     // Update is called once per frame
     void Update()
     {
@@ -30,6 +38,7 @@ public class PersonFinder : MonoBehaviour
                 // Checks if the ray hit something
                 if (Physics.Raycast(ray, out hitObject))
                 {
+                    source.Play();
                     Debug.Log("Touch");
                 }
             }
