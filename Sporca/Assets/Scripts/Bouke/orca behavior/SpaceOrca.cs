@@ -10,13 +10,13 @@ public class SpaceOrca : MonoBehaviour
 
     private float X;
     private float Z;
-
+    
     private float timeBeforeNextmovement = 1;
-    [SerializeField]
+    
     private float speed = 2;
 
-    private float minSpeed;
-    private float maxSpeed;
+    private float minSpeed = 1;
+    private float maxSpeed = 4;
     
     private Vector3 moveToPosition;
 
@@ -29,8 +29,6 @@ public class SpaceOrca : MonoBehaviour
 
     private void Update()
     {
-        
-        
         if(transform.position == moveToPosition)
         {
             //set the time that the orca moves to a random time
@@ -61,5 +59,6 @@ public class SpaceOrca : MonoBehaviour
         float step = speed * Time.deltaTime;
         //if it gets the new movetoposition varibale let this move it to the location
         transform.position = Vector3.MoveTowards(transform.position, moveToPosition, step);
+        transform.LookAt(moveToPosition);
     }
 }
