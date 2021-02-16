@@ -1,42 +1,38 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.XR.ARFoundation;
-using UnityEngine.XR.ARSubsystems;
 
 public class PersonFinder : MonoBehaviour
 {
     // Used to get the positin on the screen where you touch
     private Vector2 touchPos;
+
+    // Gets the camera you're using
     [SerializeField]
     private Camera arCamera;
-
-    private void Awake()
-    {
-
-    }
-
-    // Start is called before the first frame update
-    void Start()
-    {
-
-    }
 
     // Update is called once per frame
     void Update()
     {
 
-        Touch touch = Input.GetTouch(0);
-        touchPos = touch.position;
-        if (touch.phase == TouchPhase.Began)
+        if (Input.touchCount > 0)
         {
-            Ray ray = arCamera.ScreenPointToRay(touch.position);
-            RaycastHit hitObject;
-            if (Physics.Raycast(ray, out hitObject))
+
+
+            Touch touch = Input.GetTouch(0);
+            // Makes the touch position the posiion you touched the screen
+            touchPos = touch.position;
+            if (touch.phase == TouchPhase.Began)
             {
-                Debug.Log("Hello there");
+                // Sends out a ray for the touch position
+                Ray ray = arCamera.ScreenPointToRay(touchPos);
+                RaycastHit hitObject;
+                // Checks if the ray hit something
+                if (Physics.Raycast(ray, out hitObject))
+                {
+                    Debug.Log("Touch");
+                }
             }
         }
-
     }
 }
