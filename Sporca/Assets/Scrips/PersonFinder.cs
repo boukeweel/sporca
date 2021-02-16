@@ -14,6 +14,9 @@ public class PersonFinder : MonoBehaviour
     [SerializeField]
     private AudioSource source;
 
+    [SerializeField]
+    private PointSystem pointSys;
+
     private void Start()
     {
         
@@ -42,10 +45,12 @@ public class PersonFinder : MonoBehaviour
                     {
                         source.Play();
                         Debug.Log("Found me");
+                        pointSys.Points -= 1;
                     }
                     else
                     {
                         Debug.Log("Better luck next time");
+                        pointSys.Points += 1;
                     }
                 }
             }

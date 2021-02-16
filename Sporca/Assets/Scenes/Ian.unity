@@ -228,6 +228,7 @@ GameObject:
   m_Component:
   - component: {fileID: 158962942}
   - component: {fileID: 158962941}
+  - component: {fileID: 158962943}
   m_Layer: 0
   m_Name: ScriptManager
   m_TagString: Untagged
@@ -249,6 +250,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   arCamera: {fileID: 825830924}
   source: {fileID: 825830931}
+  pointSys: {fileID: 158962943}
 --- !u!4 &158962942
 Transform:
   m_ObjectHideFlags: 0
@@ -263,6 +265,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &158962943
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 158962940}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 70a5eb5d3ca707145ae79b4b96fccc3f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &825830923
 GameObject:
   m_ObjectHideFlags: 0
