@@ -18,7 +18,7 @@ public class HighscoreMenu : MonoBehaviour
 
     void Start()
     {
-        highscore = Random.Range(0, 20);
+        highscore = PlayerPrefs.GetInt("highscore", highscore);
     }
 
     private void Update()
@@ -31,8 +31,15 @@ public class HighscoreMenu : MonoBehaviour
 
         if (score < highscore)
         {
-          //  highscore = score;
+            highscore = score;
             highscoreVisual.text = "New " + highscore.ToString();
+            PlayerPrefs.SetInt("highscore", highscore);
+            PlayerPrefs.Save();
+        }
+
+        if (highscore <= 0)
+        {
+            highscore = 10;
         }
      }
     }
