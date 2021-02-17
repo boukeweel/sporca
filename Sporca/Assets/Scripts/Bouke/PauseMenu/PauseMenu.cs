@@ -20,6 +20,8 @@ public class PauseMenu : MonoBehaviour
     {
         paused = !paused;
 
+        Time.timeScale = paused ? 0 : 1;
+
         pauseButton.SetActive(!paused);
         pauseScreen.SetActive(paused);
     }

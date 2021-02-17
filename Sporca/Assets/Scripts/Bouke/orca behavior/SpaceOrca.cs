@@ -10,15 +10,20 @@ public class SpaceOrca : MonoBehaviour
 
     private float X;
     private float Z;
-    
+
     private float timeBeforeNextmovement = 1;
-    
+
     private float speed = 2;
 
     private float minSpeed = 1;
     private float maxSpeed = 4;
-    
+
     private Vector3 moveToPosition;
+
+    //for lookaround
+    private float TimeBeforeLookingOtherway;
+    private bool changeDirection;
+
 
     private void Start()
     {
@@ -34,7 +39,7 @@ public class SpaceOrca : MonoBehaviour
             //set the time that the orca moves to a random time
             timeBeforeNextmovement -= Time.deltaTime;
             //let the object look around
-            transform.Rotate(transform.rotation.x , transform.rotation.y + 0.01f, transform.rotation.z);
+            LookAround();
         }
         
         if (timeBeforeNextmovement <= 0)
@@ -52,7 +57,7 @@ public class SpaceOrca : MonoBehaviour
             moveToPosition = new Vector3(X, 0f, Z);
 
             //random time it takes before moving
-            timeBeforeNextmovement = Random.Range(1, 10);
+            timeBeforeNextmovement = Random.Range(4, 10);
 
             //random speed the animal wil move with the varibale minSpeed and maxSpeed
             speed = Random.Range(minSpeed, maxSpeed);
@@ -63,5 +68,31 @@ public class SpaceOrca : MonoBehaviour
         transform.position = Vector3.MoveTowards(transform.position, moveToPosition, step);
         //look where it is going
         transform.LookAt(moveToPosition);
+    }
+
+    private void LookAround()
+    {
+        
+        
+        TimeBeforeLookingOtherway -= Time.deltaTime;
+        if (TimeBeforeLookingOtherway <= 0)
+        {
+            
+            changeDirection = !changeDirection;
+            
+            TimeBeforeLookingOtherway = Random.Range(1, 2);
+        }
+
+        if (changeDirection)
+        {
+
+            transform.Rotate(Vector3.up);
+        }
+        else
+        {
+            transform.Rotate(Vector3.down);
+        }
+
+
     }
 }

@@ -496,6 +496,54 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 4065797470864318979, guid: cfce8da9b7078f6419ee102de7b705d6, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4065797470864318979, guid: cfce8da9b7078f6419ee102de7b705d6, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4065797470864318979, guid: cfce8da9b7078f6419ee102de7b705d6, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4065797470864318979, guid: cfce8da9b7078f6419ee102de7b705d6, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4065797471263158373, guid: cfce8da9b7078f6419ee102de7b705d6, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4065797471263158373, guid: cfce8da9b7078f6419ee102de7b705d6, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4065797471263158373, guid: cfce8da9b7078f6419ee102de7b705d6, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4065797471263158373, guid: cfce8da9b7078f6419ee102de7b705d6, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4065797471442786515, guid: cfce8da9b7078f6419ee102de7b705d6, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4065797471442786515, guid: cfce8da9b7078f6419ee102de7b705d6, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4065797471442786515, guid: cfce8da9b7078f6419ee102de7b705d6, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4065797471442786515, guid: cfce8da9b7078f6419ee102de7b705d6, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4065797471455040904, guid: cfce8da9b7078f6419ee102de7b705d6, type: 3}
       propertyPath: m_Name
       value: PauseMenu
