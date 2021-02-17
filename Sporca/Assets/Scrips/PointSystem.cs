@@ -26,7 +26,6 @@ public class PointSystem : MonoBehaviour
         {
             points++;
             time = 1f;
-            Debug.Log(points);
         }
 
         pointText.text = points.ToString();
