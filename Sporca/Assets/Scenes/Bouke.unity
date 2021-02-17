@@ -711,7 +711,7 @@ Transform:
   - {fileID: 321305622}
   - {fileID: 1650339949}
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &693279718
 GameObject:
@@ -1036,13 +1036,12 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1040876760}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -30, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children:
-  - {fileID: 1120096372}
+  m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1120096371
 GameObject:
@@ -1058,6 +1057,7 @@ GameObject:
   - component: {fileID: 1120096376}
   - component: {fileID: 1120096374}
   - component: {fileID: 1120096373}
+  - component: {fileID: 1120096375}
   m_Layer: 0
   m_Name: Cube
   m_TagString: Untagged
@@ -1072,13 +1072,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1120096371}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 1, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -30, y: 1, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1215144635}
-  m_Father: {fileID: 1040876762}
-  m_RootOrder: 0
+  m_Father: {fileID: 0}
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!195 &1120096373
 NavMeshAgent:
@@ -1118,6 +1118,23 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &1120096375
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1120096371}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f728e477490d0754f91194eb12cc75d4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  limitations: {fileID: 0}
+  movementRestrigtions: {x: 0, y: 0, z: 0}
+  Targetpos: {x: 0, y: 0, z: 0}
+  X: 0
+  Z: 0
 --- !u!65 &1120096376
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1303,10 +1320,10 @@ Transform:
   m_GameObject: {fileID: 1320130649}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -30, y: 0, z: 0}
-  m_LocalScale: {x: 2.8880517, y: 2.8880517, z: 2.8880517}
+  m_LocalScale: {x: 3, y: 1, z: 3}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!64 &1320130651
 MeshCollider:

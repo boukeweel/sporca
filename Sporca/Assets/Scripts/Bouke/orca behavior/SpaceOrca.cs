@@ -57,7 +57,8 @@ public class SpaceOrca : MonoBehaviour
         else
         {
             StuckTimer += Time.deltaTime;
-            
+
+            animationStats = animationsStats.walking;
             //if it gets the new movetoposition varibale let this move it to the location
             agent.SetDestination(moveToPosition);
         }
@@ -80,7 +81,7 @@ public class SpaceOrca : MonoBehaviour
             //random time it takes before moving
             timeBeforeNextmovement = Random.Range(4, 10);
 
-            animationStats = animationsStats.walking;
+            
 
             StuckTimer = 0;
         }
