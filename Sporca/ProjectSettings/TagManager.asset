@@ -5,6 +5,10 @@ TagManager:
   serializedVersion: 2
   tags:
   - Character
+  - Bouke
+  - Daninjo
+  - Wiebe
+  - Ian
   layers:
   - Default
   - TransparentFX
@@ -12,7 +16,7 @@ TagManager:
   - 
   - Water
   - UI
-  - 
+  - Test
   - 
   - 
   - 
