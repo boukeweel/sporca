@@ -11,9 +11,7 @@ public enum animationsStats
 public class SpaceOrca : MonoBehaviour
 {
 
-    private Limitations limitations;
-    private Vector3 movementRange;
-
+    
     private float X;
     private float Z;
 
@@ -42,9 +40,6 @@ public class SpaceOrca : MonoBehaviour
 
     private void Start()
     {
-        //get out of the limitations script the vector 3 movementroom to use as the movement range
-        limitations = gameObject.GetComponentInParent<Limitations>();
-        movementRange = limitations.MovementRoom;
 
         agent = GetComponent<NavMeshAgent>();
 
