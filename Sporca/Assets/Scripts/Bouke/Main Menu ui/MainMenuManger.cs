@@ -11,8 +11,11 @@ public class MainMenuManger : MonoBehaviour
     private bool mainMenuActive = true;
     private bool howToPlayActive;
 
+    private AudioSource click;
+
     private void Start()
     {
+        click = GetComponent<AudioSource>();
         //start with the mainmenu active
         mainMenu.SetActive(mainMenuActive);
         howToPlay.SetActive(howToPlayActive);
@@ -22,6 +25,7 @@ public class MainMenuManger : MonoBehaviour
     public void StartGame()
     {
         SceneManager.LoadScene(1);
+        click.Play();
     }
 
     ///activate the how to play menu when the button is pressed
@@ -30,6 +34,7 @@ public class MainMenuManger : MonoBehaviour
         mainMenuActive = false;
         howToPlayActive = true;
         ChangeScreen();
+        click.Play();
     }
 
     /// go back to the main menu screen if the button is pressed
@@ -38,6 +43,7 @@ public class MainMenuManger : MonoBehaviour
         mainMenuActive = true;
         howToPlayActive = false;
         ChangeScreen();
+        click.Play();
     }
 
     ///change the screens
@@ -51,6 +57,7 @@ public class MainMenuManger : MonoBehaviour
     public void ExitGame()
     {
         Application.Quit();
+        click.Play();
     }
 
     private void OnApplicationQuit()
