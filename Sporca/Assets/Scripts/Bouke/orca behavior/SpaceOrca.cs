@@ -17,6 +17,14 @@ public class SpaceOrca : MonoBehaviour
     private float X;
     private float Z;
 
+    [Header("place the minimum and the maximum of the allowed travel distance in world space for X")]
+    [SerializeField] private float minXAllowed;
+    [SerializeField] private float maxXAllowed;
+
+    [Header("place the minimum and the maximum of the allowed travel distance in world space for Z")]
+    [SerializeField] private float minZAllowed;
+    [SerializeField] private float maxZAllowed;
+
     private float timeBeforeNextmovement = 0;
     private float StuckTimer;
 
@@ -67,14 +75,10 @@ public class SpaceOrca : MonoBehaviour
         if (timeBeforeNextmovement <= 0) 
         {
             //get a random location to move to in the parameters set in the limatation script
-            float randomX;
-            float randomZ;
+            
 
-            randomX = movementRange.x / 2;
-            randomZ = movementRange.z / 2;
-
-            X = Random.Range(-randomX, randomX);
-            Z = Random.Range(-randomZ, randomZ);
+            X = Random.Range(minXAllowed, maxXAllowed);
+            Z = Random.Range(minZAllowed, maxZAllowed);
 
             moveToPosition = new Vector3(X, transform.position.y, Z);
 
