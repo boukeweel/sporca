@@ -32,7 +32,6 @@ public class PersonFinder : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
         if (foundBouke && foundDaninjo && foundIan && foundWiebe)
         {
             pointSys.FinalPoints = pointSys.Points;
@@ -46,8 +45,6 @@ public class PersonFinder : MonoBehaviour
 
         if (Input.touchCount > 0)
         {
-
-
             Touch touch = Input.GetTouch(0);
             // Makes the touch position the posiion you touched the screen
             touchPos = touch.position;
@@ -96,8 +93,6 @@ public class PersonFinder : MonoBehaviour
                         Debug.Log("Better luck next time");
                         pointSys.Points += 1;
                     }
-
-
                 }
             }
         }
