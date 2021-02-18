@@ -18,17 +18,15 @@ public class HighscoreMenu : MonoBehaviour
 
     void Start()
     {
+        score = PlayerPrefs.GetInt("currentScore", pointSys.FinalPoints);
         highscore = PlayerPrefs.GetInt("highscore", highscore);
+
+        highscoreVisual.text = highscore.ToString();
+        scoreVisual.text = score.ToString();
     }
 
     private void Update()
     {
-        
-        highscoreVisual.text = highscore.ToString();
-
-        score = pointSys.Points;
-        scoreVisual.text = score.ToString();
-
         if (score < highscore)
         {
             highscore = score;
@@ -39,7 +37,7 @@ public class HighscoreMenu : MonoBehaviour
 
         if (highscore <= 0)
         {
-            highscore = 10;
+            highscore = score;
         }
      }
     }

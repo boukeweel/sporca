@@ -29,15 +29,24 @@ public class PersonFinder : MonoBehaviour
     [SerializeField]
     private bool foundWiebe = false;
 
+    private void Awake()
+    {
+        DontDestroyOnLoad(gameObject);
+    }
+
     // Update is called once per frame
     void Update()
     {
 
         if (foundBouke && foundDaninjo && foundIan && foundWiebe)
         {
+            pointSys.FinalPoints = pointSys.Points;
             Debug.Log("You've done it!");
-            SceneManager.LoadScene("HighScore");
+            SceneManager.LoadScene("EndManu");
             pointSys.Pause = true;
+            Debug.Log(pointSys.FinalPoints);
+            PlayerPrefs.SetInt("currentScore", pointSys.FinalPoints);
+            PlayerPrefs.Save();
         }
 
         if (Input.touchCount > 0)
