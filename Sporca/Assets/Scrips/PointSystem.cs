@@ -30,7 +30,7 @@ public class PointSystem : MonoBehaviour
         {
             time -= Time.deltaTime;
         }
-        
+
         if (time <= 0)
         {
             points++;

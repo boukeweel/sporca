@@ -93,7 +93,7 @@ public class PersonFinder : MonoBehaviour
                         pointSys.Points += 1;
                     }
 
-                   
+
                 }
             }
         }
