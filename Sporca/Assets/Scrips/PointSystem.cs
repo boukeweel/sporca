@@ -8,6 +8,12 @@ public class PointSystem : MonoBehaviour
 
     private float time = 1f;
     private int points;
+    private bool pause = false;
+    public bool Pause
+    {
+        get { return pause; }
+        set { pause = value; }
+    }
 
     [SerializeField]
     private Text pointText;
@@ -20,7 +26,10 @@ public class PointSystem : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        time -= Time.deltaTime;
+        if (!pause)
+        {
+            time -= Time.deltaTime;
+        }
 
         if (time <= 0)
         {

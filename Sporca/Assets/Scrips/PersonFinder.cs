@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PersonFinder : MonoBehaviour
 {
@@ -17,14 +18,27 @@ public class PersonFinder : MonoBehaviour
     [SerializeField]
     private PointSystem pointSys;
 
-    private void Start()
-    {
-        
-    }
+    private GameObject[] persons;
+
+    [SerializeField]
+    private bool foundBouke = false;
+    [SerializeField]
+    private bool foundDaninjo = false;
+    [SerializeField]
+    private bool foundIan = false;
+    [SerializeField]
+    private bool foundWiebe = false;
 
     // Update is called once per frame
     void Update()
     {
+
+        if (foundBouke && foundDaninjo && foundIan && foundWiebe)
+        {
+            Debug.Log("You've done it!");
+            SceneManager.LoadScene("HighScore");
+            pointSys.Pause = true;
+        }
 
         if (Input.touchCount > 0)
         {
@@ -41,17 +55,45 @@ public class PersonFinder : MonoBehaviour
                 // Checks if the ray hit something
                 if (Physics.Raycast(ray, out hitObject))
                 {
-                    if (hitObject.transform.tag == "Character")
+                    if (hitObject.transform.tag == "Bouke")
                     {
+                        Destroy(hitObject.transform.gameObject);
                         source.Play();
                         Debug.Log("Found me");
                         pointSys.Points -= 1;
+                        foundBouke = true;
+                    }
+                    else if (hitObject.transform.tag == "Daninjo")
+                    {
+                        Destroy(hitObject.transform.gameObject);
+                        source.Play();
+                        Debug.Log("Found me");
+                        pointSys.Points -= 1;
+                        foundDaninjo = true;
+                    }
+                    else if (hitObject.transform.tag == "Ian")
+                    {
+                        Destroy(hitObject.transform.gameObject);
+                        source.Play();
+                        Debug.Log("Found me");
+                        pointSys.Points -= 1;
+                        foundIan = true;
+                    }
+                    else if (hitObject.transform.tag == "Wiebe")
+                    {
+                        Destroy(hitObject.transform.gameObject);
+                        source.Play();
+                        Debug.Log("Found me");
+                        pointSys.Points -= 1;
+                        foundWiebe = true;
                     }
                     else
                     {
                         Debug.Log("Better luck next time");
                         pointSys.Points += 1;
                     }
+
+
                 }
             }
         }
