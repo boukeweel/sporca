@@ -29,11 +29,6 @@ public class PersonFinder : MonoBehaviour
     [SerializeField]
     private bool foundWiebe = false;
 
-    private void Awake()
-    {
-        DontDestroyOnLoad(gameObject);
-    }
-
     // Update is called once per frame
     void Update()
     {
