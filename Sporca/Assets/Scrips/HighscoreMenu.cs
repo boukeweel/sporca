@@ -16,21 +16,23 @@ public class HighscoreMenu : MonoBehaviour
     [SerializeField]
     private PointSystem pointSys;
 
+    [SerializeField]
+    private AudioSource newHighscore;
+
     void Start()
     {
+        score = PlayerPrefs.GetInt("currentScore", pointSys.FinalPoints);
         highscore = PlayerPrefs.GetInt("highscore", highscore);
+
+        highscoreVisual.text = highscore.ToString();
+        scoreVisual.text = score.ToString();
     }
 
     private void Update()
     {
-        
-        highscoreVisual.text = highscore.ToString();
-
-        score = pointSys.Points;
-        scoreVisual.text = score.ToString();
-
         if (score < highscore)
         {
+            newHighscore.Play();
             highscore = score;
             highscoreVisual.text = "New " + highscore.ToString();
             PlayerPrefs.SetInt("highscore", highscore);
@@ -39,7 +41,7 @@ public class HighscoreMenu : MonoBehaviour
 
         if (highscore <= 0)
         {
-            highscore = 10;
+            highscore = score;
         }
      }
     }

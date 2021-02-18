@@ -8,6 +8,7 @@ public class PointSystem : MonoBehaviour
 
     private float time = 1f;
     private int points;
+    private int finalPoints;
     private bool pause = false;
     public bool Pause
     {
@@ -21,6 +22,12 @@ public class PointSystem : MonoBehaviour
     {
         get { return points; }
         set { points = value; }
+    }
+
+    public int FinalPoints
+    {
+        get { return finalPoints; }
+        set { finalPoints = value; }
     }
 
     // Update is called once per frame

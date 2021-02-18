@@ -5,11 +5,18 @@ using UnityEngine.SceneManagement;
 
 public class EndMenu : MonoBehaviour
 {
+    private AudioSource click;
+
+    void Start()
+    {
+        click = GetComponent<AudioSource>();    
+    }
     /// <summary>
     /// retry the game it loads scene number 1 in atm
     /// </summary>
     public void Retry()
     {
+        click.Play();
         SceneManager.LoadScene(1);
     }
     /// <summary>
@@ -17,6 +24,7 @@ public class EndMenu : MonoBehaviour
     /// </summary>
     public void BackToMainMenu()
     {
+        click.Play();
         SceneManager.LoadScene("MainMenu");
     }
     /// <summary>
@@ -24,6 +32,7 @@ public class EndMenu : MonoBehaviour
     /// </summary>
     public void ExitGame()
     {
+        click.Play();
         Application.Quit();
     }
 }
