@@ -269,7 +269,7 @@ Rigidbody:
   m_UseGravity: 0
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 4
+  m_Constraints: 0
   m_CollisionDetection: 0
 --- !u!114 &40564261
 MonoBehaviour:
@@ -1975,7 +1975,7 @@ GameObject:
   - component: {fileID: 1120096375}
   m_Layer: 0
   m_Name: Human
-  m_TagString: Untagged
+  m_TagString: Character
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2081,7 +2081,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: c90c7ea2adf2c4749b584de4587f5d1a, type: 2}
+  - {fileID: 2100000, guid: be616379f8d3d0c4ea8f65283c673b09, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
