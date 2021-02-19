@@ -1078,6 +1078,7 @@ GameObject:
   - component: {fileID: 354151939}
   - component: {fileID: 354151938}
   - component: {fileID: 354151937}
+  - component: {fileID: 354151940}
   m_Layer: 0
   m_Name: ScriptManager
   m_TagString: Untagged
@@ -1132,6 +1133,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &354151940
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 354151936}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 57b3584aa20585d43ba29660ccf8929a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  surounding: {fileID: 563305816}
 --- !u!1 &369424828
 GameObject:
   m_ObjectHideFlags: 0
@@ -24468,6 +24482,7 @@ GameObject:
   - component: {fileID: 1354886055}
   - component: {fileID: 1354886054}
   - component: {fileID: 1354886058}
+  - component: {fileID: 1354886059}
   m_Layer: 0
   m_Name: AR Session
   m_TagString: Untagged
@@ -24529,6 +24544,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Camera: {fileID: 0}
+--- !u!114 &1354886059
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1354886053}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fa17d122634046b4a8e23048891fafc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_RaycastPrefab: {fileID: 0}
 --- !u!1 &1370326382
 GameObject:
   m_ObjectHideFlags: 0

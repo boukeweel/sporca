@@ -34,10 +34,6 @@ public class PlaneDetection : MonoBehaviour
             surounding.SetActive(true);
             surounding.transform.SetPositionAndRotation(placementPose.position, placementPose.rotation);
         }
-        else
-        {
-            surounding.SetActive(false);
-        }
     }
 
     private void UpdatePlacementPose()
