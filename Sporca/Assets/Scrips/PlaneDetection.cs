@@ -8,7 +8,6 @@ using System;
 
 public class PlaneDetection : MonoBehaviour
 {
-    private ARSessionOrigin arOrigin;
     private ARRaycastManager arRaycast;
     private Pose placementPose;
     private bool validPlacementPose = false;
@@ -18,7 +17,7 @@ public class PlaneDetection : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        arOrigin = FindObjectOfType<ARSessionOrigin>();
+        arRaycast = FindObjectOfType<ARRaycastManager>();
     }
 
     // Update is called once per frame
