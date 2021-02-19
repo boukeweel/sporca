@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.XR.ARFoundation;
 using UnityEngine.Experimental.XR;
+using UnityEngine.XR.ARSubsystems;
 using System;
 
 public class PlaneDetection : MonoBehaviour
@@ -44,7 +45,7 @@ public class PlaneDetection : MonoBehaviour
     {
         var screenCenter = Camera.current.ViewportToScreenPoint(new Vector3(0.5f, 0.5f));
         var hits = new List<ARRaycastHit>();
-        arRaycast.Raycast(screenCenter, hits, UnityEngine.XR.ARSubsystems.TrackableType.Planes);
+        arRaycast.Raycast(screenCenter, hits, TrackableType.Planes);
 
         validPlacementPose = hits.Count > 0;
         if (validPlacementPose)
