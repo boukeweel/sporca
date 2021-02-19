@@ -9,9 +9,12 @@ public class PauseMenu : MonoBehaviour
     public GameObject pauseButton;
     private bool paused;
 
+
     private void Start()
     {
         pauseScreen.SetActive(false);
+
+        Time.timeScale = 1;
     }
     /// <summary>
     /// unpauze and pauze the game
