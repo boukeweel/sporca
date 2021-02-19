@@ -13,7 +13,10 @@ public class PersonFinder : MonoBehaviour
     private Camera arCamera;
 
     [SerializeField]
-    private AudioSource source;
+    private AudioSource correct;
+
+    [SerializeField]
+    private AudioSource wrong;
 
     [SerializeField]
     private PointSystem pointSys;
@@ -59,7 +62,7 @@ public class PersonFinder : MonoBehaviour
                     if (hitObject.transform.tag == "Bouke")
                     {
                         Destroy(hitObject.transform.gameObject);
-                        source.Play();
+                        correct.Play();
                         Debug.Log("Found me");
                         pointSys.Points -= 1;
                         foundBouke = true;
@@ -67,7 +70,7 @@ public class PersonFinder : MonoBehaviour
                     else if (hitObject.transform.tag == "Daninjo")
                     {
                         Destroy(hitObject.transform.gameObject);
-                        source.Play();
+                        correct.Play();
                         Debug.Log("Found me");
                         pointSys.Points -= 1;
                         foundDaninjo = true;
@@ -75,7 +78,7 @@ public class PersonFinder : MonoBehaviour
                     else if (hitObject.transform.tag == "Ian")
                     {
                         Destroy(hitObject.transform.gameObject);
-                        source.Play();
+                        correct.Play();
                         Debug.Log("Found me");
                         pointSys.Points -= 1;
                         foundIan = true;
@@ -83,13 +86,14 @@ public class PersonFinder : MonoBehaviour
                     else if (hitObject.transform.tag == "Wiebe")
                     {
                         Destroy(hitObject.transform.gameObject);
-                        source.Play();
+                        correct.Play();
                         Debug.Log("Found me");
                         pointSys.Points -= 1;
                         foundWiebe = true;
                     }
                     else
                     {
+                        wrong.Play();
                         Debug.Log("Better luck next time");
                         pointSys.Points += 1;
                     }

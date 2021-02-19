@@ -41,7 +41,7 @@ public class HighscoreMenu : MonoBehaviour
 
         if (highscore <= 0)
         {
-            highscore = score;
+            highscore = 120;
         }
      }
     }
